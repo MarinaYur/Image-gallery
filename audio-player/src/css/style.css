@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+  min-height: 30vh;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  flex-basis: 40%;
+}
+
+footer {
+  width: 468px;
+  max-width: 100%;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  width: 768px;
+  max-width: 100%;
+}
+
+.footer__git-logo,
+.footer__rss-logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-size: cover;
+}
+
+.footer__git-logo {
+  background-image: url(/assets/git-logo.png);
+}
+
+.footer__rss-logo {
+  background-image: url(/assets/rss-logo.svg);
+}
+
+.player {
+  width: 308px;
+  max-width: 100%;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  background-color: #d0a5da;
+  border: 4px solid rgba(68, 9, 95, 0.6235294118);
+}
+
+.player__cover {
+  max-width: 100%;
+  height: 300px;
+  min-height: 100%;
+}
+
+.player__song-date {
+  color: aliceblue;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  background-color: rgba(68, 9, 95, 0.6235294118);
+}
+.player__song-date p {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+}
+
+.player__management {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4vh;
+  padding: 5px;
+}
+
+.player__progress {
+  display: flex;
+  flex-direction: column;
+}
+
+.player__total-time,
+.player__current-time {
+  height: 20px;
+  width: 15px;
+  margin-right: 5px;
+  background-color: #f7e5fc;
+}
+
+.player__total-time {
+  align-self: flex-end;
+}
+
+.player__current-time {
+  align-self: flex-start;
+}
+
+.backward,
+.forward,
+.play {
+  width: 45px;
+  height: 45px;
+  max-width: 100%;
+  background-size: cover;
+  background-color: #f7e5fc;
+  border: 1px solid #000000;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
+
+.player__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play {
+  width: 55px;
+  height: 55px;
+  background-image: url(/assets/play.png);
+}
+
+.backward {
+  background-image: url(/assets/backward.png);
+}
+
+.forward {
+  background-image: url("/assets/forward.png");
+}/*# sourceMappingURL=style.css.map */

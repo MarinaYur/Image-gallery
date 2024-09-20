@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/x-icon" href="./assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Audio-player</title>
+  </head>
+  <body>
+    <main>
+    <div class="player">
+      <div class="player__cover"></div>
+      <div class="player__date">
+        <div class="player__song-date">
+          <p class="player__singer">singer</p>
+          <p class="player__song-title">song-title</p>
+        </div>
+        <div class="player__management">
+          <div class="player__progress">
+            <div class="player__total-time"></div>
+            <input
+              type="range"
+              id="progress-bar"
+              min="0"
+              max="233.717551"
+              value="0"
+            />
+            <div class="player__current-time"></div>
+          </div>
+          <div class="player__controls">
+            <div class="pause play"></div>
+            <div class="backward"></div>
+            <div class="forward"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+    <footer>
+      <div class="footer__content">
+        <a href="https://github.com/MarinaYur?tab=repositories"
+          ><div class="footer__git-logo"></div
+        ></a>
+        <span>2024</span>
+        <a href="https://rs.school/courses/javascript-preschool-ru"
+          ><div class="footer__rss-logo"></div
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>
