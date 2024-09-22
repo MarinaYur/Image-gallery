@@ -29,7 +29,13 @@ export const playAudio = () => {
 }
 
 export const switchTrack = () => {
-
+  if (audio.src) {
+    audio.pause();
+}
+  audio.src = playList[trackNumber].songPath;
+  audio.currentTime = 0;
+  fillSongData();
+  isPlay ? audio.play() : audio.pause();
 }
 
 export const fillSongData = () => {
@@ -41,22 +47,15 @@ export const fillSongData = () => {
 
 export const switchNextAudio = () => {
   trackNumber < playListLength - 1 ? trackNumber += 1 : trackNumber = 0;
-  if (audio.src) {
-    audio.pause();
-}
-  audio.src = playList[trackNumber].songPath;
-  audio.currentTime = 0;
-  fillSongData();
-  isPlay ? audio.play() : audio.pause();
+  switchTrack();
 };
 
 const switchPrevAudio = () => {
-  trackNumber = 0 ? trackNumber = playListLength - 1 : trackNumber -= 1;
-  isPlay = !isPlay;
-  playAudio();
-  fillSongData();
+  trackNumber === 0 ? trackNumber = playListLength - 1 : trackNumber -= 1;
+  switchTrack();
 };
 
 playPauseBtn.addEventListener("click", playAudio);
 
 nextAudioBtn.addEventListener("click", switchNextAudio);
+prevAudioBtn.addEventListener("click", switchPrevAudio);
