@@ -12,6 +12,10 @@
   max-width: 100%;
   height: 300px;
   min-height: 100%;
+  border-top-left-radius: 40%;
+  border: 1px solid #44095f9f;
+  background-image: url(../../src/assets/cover/cher-Strong-Enaugh.jpeg);
+  background-size: cover;
   // background-color: aquamarine;
 }
 
@@ -30,23 +34,25 @@
 .player__management {
   display: flex;
   flex-direction: column;
-  row-gap: 4vh;
+  row-gap: 2vh;
   padding: 5px;
+  padding-top: 3vh;
 }
 
 .player__progress {
   display: flex;
   flex-direction: column;
+  row-gap: 0.5vh;
 }
-
-
 
 .player__total-time,
 .player__current-time {
-  height: 20px;
-  width: 15px;
-  margin-right: 5px;
-  background-color: #f7e5fc;
+  // height: 20px;
+  // width: 15px;
+  // margin-right: 5px;
+  color: #44095f9f;
+  font-weight: 900;
+  // background-color: #f7e5fc;
 }
 
 .player__total-time {
@@ -59,7 +65,7 @@
 
 .backward,
 .forward,
-.play {
+.pause-play {
   width: 45px;
   height: 45px;
   max-width: 100%;
@@ -68,7 +74,7 @@
   border: 1px solid #000000;
   border-top-left-radius: 20%;
   border-bottom-right-radius: 20%;
-
+  transition: 0.3s;
 }
 
 .player__controls {
@@ -80,13 +86,19 @@
 .play {
   width: 55px;
   height: 55px;
-  background-image: url(/assets/play.png);
+  background-image: url(/src/assets/play.png);
+}
+
+.pause {
+  width: 55px;
+  height: 55px;
+  background-image: url(/src/assets/pause.png);
 }
 
 .backward {
-  background-image: url(/assets/backward.png);
+  background-image: url(/src//assets/backward.png);
 }
 
 .forward{
-  background-image: url('/assets/forward.png');
+  background-image: url('/src//assets/forward.png');
 }
