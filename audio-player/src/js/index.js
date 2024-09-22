@@ -8,6 +8,7 @@ const playerSongTitle = document.querySelector(".player__song-title");
 const cover = document.querySelector(".player__cover");
 const totalTime = document.querySelector(".player__total-time");
 const playerCurrentTime = document.querySelector(".player__current-time");
+const progressBar = document.querySelector(".progress-bar");
 
 const nextAudioBtn = document.querySelector(".forward");
 const prevAudioBtn = document.querySelector(".backward");
@@ -36,6 +37,8 @@ export const setCurrentTime = () => {
   const seconds = Math.floor(currentTime % 60);
   const formattedTime = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   playerCurrentTime.innerHTML = formattedTime;
+  const duration = audio.duration;
+  progressBar.value = (currentTime / duration) * 100 || 0;
 };
 
 export const switchTrack = () => {
@@ -47,6 +50,7 @@ export const switchTrack = () => {
 
   fillSongData();
   isPlay ? audio.play() : audio.pause();
+  progressBar.value = '0';
 };
 
 export const fillSongData = () => {
@@ -69,3 +73,8 @@ const switchPrevAudio = () => {
 playPauseBtn.addEventListener("click", playAudio);
 nextAudioBtn.addEventListener("click", switchNextAudio);
 prevAudioBtn.addEventListener("click", switchPrevAudio);
+progressBar.addEventListener("input", () => {
+    const duration = audio.duration;
+    audio.currentTime = (progressBar.value / 100) * duration;
+    // progressBar.max = 100;
+});
