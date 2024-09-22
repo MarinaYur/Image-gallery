@@ -1,7 +1,10 @@
 footer {
-  // align-content: ;
   width: 468px;
-  max-width: 100%;}
+  max-width: 100%;
+  padding-top: 3vh;
+  border-top: 2px solid #44095f9f;
+  border-top-left-radius: 40%;
+}
 
 .footer__content {
   display: flex;

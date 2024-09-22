@@ -21,6 +21,7 @@ body {
   font-size: 1.6rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
+  background-color: rgba(190, 192, 242, 0.6235294118);
 }
 
 main {
@@ -39,6 +40,9 @@ main {
 footer {
   width: 468px;
   max-width: 100%;
+  padding-top: 3vh;
+  border-top: 2px solid rgba(68, 9, 95, 0.6235294118);
+  border-top-left-radius: 40%;
 }
 
 .footer__content {
@@ -167,4 +171,28 @@ footer {
 
 .forward {
   background-image: url("./../assets/forward.png");
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+  margin: 5px 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: rgba(68, 9, 95, 0.6235294118);
+  border: 1px solid #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 15px;
+  background: #ddd;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */

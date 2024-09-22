@@ -39,6 +39,9 @@ export const setCurrentTime = () => {
   playerCurrentTime.innerHTML = formattedTime;
   const duration = audio.duration;
   progressBar.value = (currentTime / duration) * 100 || 0;
+  if (currentTime === duration) {
+    switchNextAudio();
+  }
 };
 
 export const switchTrack = () => {
@@ -56,6 +59,7 @@ export const switchTrack = () => {
 export const fillSongData = () => {
   playerSinger.innerHTML = playList[trackNumber].singer;
   playerSongTitle.innerHTML = playList[trackNumber].songTitle;
+  totalTime.innerHTML = playList[trackNumber].totalTime;
   cover.style.background = `url(${playList[trackNumber].coverPath})`;
   cover.style.backgroundSize = "cover";
 };
@@ -76,5 +80,4 @@ prevAudioBtn.addEventListener("click", switchPrevAudio);
 progressBar.addEventListener("input", () => {
     const duration = audio.duration;
     audio.currentTime = (progressBar.value / 100) * duration;
-    // progressBar.max = 100;
 });
