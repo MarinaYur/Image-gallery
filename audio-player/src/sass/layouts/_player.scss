@@ -87,19 +87,19 @@
 .play {
   width: 55px;
   height: 55px;
-  background-image: url(/src/assets/play.png);
+  background-image: url('./../assets/play.png');
 }
 
 .pause {
   width: 55px;
   height: 55px;
-  background-image: url(/src/assets/pause.png);
+  background-image: url('./../assets/pause.png');
 }
 
 .backward {
-  background-image: url(/src//assets/backward.png);
+  background-image: url('./../assets/backward.png');
 }
 
 .forward{
-  background-image: url('/src//assets/forward.png');
+  background-image: url('./../assets/forward.png');
 }
