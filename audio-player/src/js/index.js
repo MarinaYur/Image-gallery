@@ -13,7 +13,7 @@ const nextAudioBtn = document.querySelector(".forward");
 const prevAudioBtn = document.querySelector(".backward");
 
 const playListLength = playList.length;
-const audio = new Audio("../src/assets/songs/CherStrongEnough.mp3");
+const audio = new Audio("./src/assets/songs/CherStrongEnough.mp3");
 
 export const playAudio = () => {
   if (!isPlay) {
