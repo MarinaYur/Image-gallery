@@ -136,6 +136,13 @@ footer {
   transition: 0.3s;
 }
 
+.backward:active,
+.forward:active,
+.pause-play:active {
+  scale: 1.1;
+  background-color: #a584ae;
+}
+
 .player__controls {
   display: flex;
   justify-content: center;
