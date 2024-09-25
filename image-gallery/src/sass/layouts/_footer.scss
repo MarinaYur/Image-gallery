@@ -1,0 +1,28 @@
+footer {
+  align-self: center;
+  max-width: 1300px;
+  width: 100%;
+  // border-top: 2px solid #44095f9f;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+
+.footer__git-logo,
+.footer__rss-logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-size: cover;
+}
+
+.footer__git-logo {
+  background-image: url('./../assets/git-logo.png');
+}
+
+.footer__rss-logo {
+  background-image: url('./../assets/rss-logo.svg');
+}

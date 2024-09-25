@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, serif;
+    font-weight: 400;
+    background-image: url(/src/assets/body-bgrd.jpg);
+    background-size: cover;
+    padding: 0 7dvw 0 7dvw;
+}
+
+h1 {
+    position: relative;
+    font-size: 5rem;
+    font-family: 'Caveat', sans-serif;
+    color: #efea66;
+    line-height: 50px;
+    font-weight: 900;
+}
+
