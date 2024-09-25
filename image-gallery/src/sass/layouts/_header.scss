@@ -38,7 +38,12 @@ header {
   border: 6px double #efeda6;
   background-color: #ffffff;
   background-image: url(./../assets/search.svg);
-  background-size: cover;}
+  background-size: cover;
+}
+
+.header__search-icon:hover {
+  cursor: pointer;
+}
 
 .header-input:focus {
   box-shadow: 10px 5px 5px #efeda6;

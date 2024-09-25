@@ -14,8 +14,11 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   font-size: 1.6rem;
-  font-family: Arial, Helvetica, serif;
+  color: #efea66;
+  font-family: "Caveat", serif;
   font-weight: 400;
   background-image: url(/src/assets/body-bgrd.jpg);
   background-size: cover;
@@ -25,7 +28,7 @@ body {
 h1 {
   position: relative;
   font-size: 5rem;
-  font-family: "Caveat", sans-serif;
+  font-family: "Caveat", serif;
   color: #efea66;
   line-height: 50px;
   font-weight: 900;
@@ -56,6 +59,10 @@ footer {
 
 .footer__rss-logo {
   background-image: url("./../assets/rss-logo.svg");
+}
+
+footer span {
+  color: #efea66;
 }
 
 header {
@@ -101,6 +108,10 @@ header {
   background-size: cover;
 }
 
+.header__search-icon:hover {
+  cursor: pointer;
+}
+
 .header-input:focus {
   box-shadow: 10px 5px 5px #efeda6;
 }
@@ -113,8 +124,8 @@ header {
   max-width: 1300px;
   width: 100%;
   align-self: center;
-  min-height: 92dvh;
   padding-bottom: 3dvh;
+  transition: 0.5s;
 }
 
 .gallery__picture {
@@ -127,4 +138,9 @@ header {
   height: 250px;
   object-fit: cover;
   border-radius: 15px;
+}
+
+.gallery__msg-null-answer {
+  color: blue;
+  font-size: 5rem;
 }/*# sourceMappingURL=style.css.map */

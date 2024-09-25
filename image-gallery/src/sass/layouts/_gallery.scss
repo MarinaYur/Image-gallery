@@ -6,12 +6,15 @@
   max-width: 1300px;
   width: 100%;
   align-self: center;
-  min-height: calc(100dvh - 8dvh);
+  // min-height: calc(100dvh - 8dvh);
   padding-bottom: 3dvh;
+  transition: 0.5s;
 }
 
 .gallery__picture {
   border: 5px solid #FFFFFF ;
+  // padding-bottom: 3dvh;
+
 }
 
 .gallery__picture img {
@@ -20,4 +23,9 @@
   height: 250px;
   object-fit: cover;
   border-radius: 15px;
+}
+
+.gallery__msg-null-answer {
+  color: blue;
+  font-size: 5rem;
 }
