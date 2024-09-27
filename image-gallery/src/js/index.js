@@ -1,23 +1,23 @@
+const submit = document.querySelector(".header__search-icon");
+let input = document.querySelector(".header-input");
+const gallery = document.querySelector(".gallery");
+const clear = document.querySelector(".header__clear");
+const modal = document.querySelector(".modal");
+const close = document.querySelector(".close-modal");
+const modalContent = document.querySelector(".modal-content");
 
-
-const submit = document.querySelector('.header__search-icon');
-let input = document.querySelector('.header-input');
-const gallery = document.querySelector('.gallery');
-const clear = document.querySelector('.header__clear');
-
-let query = 'nature';
-let perPage = '28';
-let msgAboutNullAnswer = 'Sorry, nothing was found for your query. Try changing the query and re-enabling the search.';
-let msgServerIsNotResponding = 'The server is not responding. Please try again';
+let query = "nature";
+let perPage = "28";
+let msgAboutNullAnswer =
+  "Sorry, nothing was found for your query. Try changing the query and re-enabling the search.";
+let msgServerIsNotResponding = "The server is not responding. Please try again";
 
 const createRequestWithNewURL = () => {
-  gallery.innerHTML = '';
+  gallery.innerHTML = "";
   query = input.value;
   const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=${perPage}&orientation=landscape&client_id=xuDc8Ih3-wl4c13_mA0xvJuazv8R68rZ0gvEEDFk4K8`;
   getData(url);
 };
-
-
 
 const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=${perPage}&orientation=landscape&client_id=xuDc8Ih3-wl4c13_mA0xvJuazv8R68rZ0gvEEDFk4K8`;
 
@@ -26,47 +26,71 @@ async function getData(url) {
   const data = await res.json();
   const answerArray = data.results;
   if ((res.status === 200 && answerArray.length === 0) || res.status === 400) {
-      showMsgAboutNullAnswer(msgAboutNullAnswer);
-    } else if (res.status === 200) {
-      answerArray.forEach(img => {
-        showAnswerImg(img.alt_description, img.urls.regular)
-      });
-    } else {
-      showMsgAboutNullAnswer(msgServerIsNotResponding)
-    }
+    showMsgAboutNullAnswer(msgAboutNullAnswer);
+  } else if (res.status === 200) {
+    answerArray.forEach((img) => {
+      showAnswerImg(img.alt_description, img.urls.regular);
+    });
+  } else {
+    showMsgAboutNullAnswer(msgServerIsNotResponding);
   }
+}
 getData(url);
 
 const showMsgAboutNullAnswer = (msgAboutNullAnswer) => {
-  const p = document.createElement('p');
-  p.classList.add('gallery__msg-null-answer');
+  const p = document.createElement("p");
+  p.classList.add("gallery__msg-null-answer");
   p.innerHTML = msgAboutNullAnswer;
   gallery.append(p);
 };
 
-const showAnswerImg = (alt,url) => {
-  const div = document.createElement('div');
-  const img = document.createElement('img');
+const showAnswerImg = (alt, url) => {
+  const div = document.createElement("div");
+  const img = document.createElement("img");
   img.alt = alt;
   img.src = url;
-  div.classList.add('gallery__picture');
+  div.classList.add("gallery__picture");
   gallery.append(div);
   div.append(img);
 };
 
-submit.addEventListener('click', createRequestWithNewURL);
+submit.addEventListener("click", createRequestWithNewURL);
 
-document.addEventListener( 'keyup', event => {
-  if( event.code === 'Enter' && document.activeElement === input) createRequestWithNewURL();
+document.addEventListener("keyup", (event) => {
+  if (event.code === "Enter" && document.activeElement === input)
+    createRequestWithNewURL();
 });
 
-document.addEventListener( 'input', event => {
+document.addEventListener("input", (event) => {
   if (input.value) {
-    clear.classList.remove('header__clear');
-  } else clear.classList.add('header__clear');
+    clear.classList.remove("header__clear");
+  } else clear.classList.add("header__clear");
 });
 
-clear.addEventListener('click', () => {
-  input.value = '';
-  clear.classList.add('header__clear');
-})
+clear.addEventListener("click", () => {
+  input.value = "";
+  clear.classList.add("header__clear");
+});
+
+gallery.addEventListener("click", (e) => {
+  console.log(e.target);
+  if (!e.target.classList.contains('modal') && !e.target.classList.contains('close-modal')) {
+  modal.style.display = "flex";
+  modalContent.src = e.target.src;
+}
+});
+
+close.addEventListener("click", (e) => {
+  modal.style.display = "none";}
+);
+
+modal.addEventListener("click", (e) => {
+    modal.style.display = "none";
+});
+
+
+console.log(`Дополнительный функционал:
+1. если пришел пустой ответ, то появляется сообщение об этом, и рекомендация
+попробовать еще раз;
+2. при одном клике на картинку она увеличивается и центрируется, закрывается при клике
+по свободному от картинки пространству или по крестику.`)
