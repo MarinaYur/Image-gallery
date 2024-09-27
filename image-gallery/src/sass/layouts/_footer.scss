@@ -8,25 +8,32 @@ footer {
 .footer__content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 100%;
+  // background-color: #7fc7d5;
+  background-image: url(/src/assets/body-bgrd.jpg);
+  border-radius: 25px;
+  padding: 10px;
 }
-
 
 .footer__git-logo,
 .footer__rss-logo {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   background-size: cover;
 }
 
 .footer__git-logo {
-  background-image: url('./../assets/git-logo.png');
+  border-radius: 50%;
+  background-image: url("./../assets/git-logo.png");
 }
 
 .footer__rss-logo {
-  background-image: url('./../assets/rss-logo.svg');
+  background-image: url("./../assets/rss-logo.svg");
 }
 
 footer span {
+  font-size: 5rem;
   color: #efea66;
+  font-weight: 900;
 }

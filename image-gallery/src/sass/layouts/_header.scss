@@ -18,17 +18,38 @@ header {
   align-items: center;
 }
 
+// .header__search-clear {
+//   display: flex;
+// border-radius: 1rem;
+// border: 6px double #efeda6;
+// }
+
 .header-input {
   width: 20dvw;
   height: 39px;
   border-radius: 1rem;
   border: 6px double #efeda6;
   align-self: flex-end;
+  outline: none;
 }
 
 .header__search-line {
+  position: relative;
   display: flex;
   z-index: 2;
+}
+
+.header__clear {
+  display: none;
+}
+
+.header__clear_active {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  right: 50px;
+  top: 25%;
+  color: rgb(128, 128, 128);
+  cursor: pointer;
 }
 
 .header__search-icon {
@@ -45,6 +66,7 @@ header {
   cursor: pointer;
 }
 
-.header-input:focus {
-  box-shadow: 10px 5px 5px #efeda6;
+.header-input:focus,
+.header__search-icon:hover {
+  box-shadow: 0px 0px 5px 5px #efeda6;
 }
