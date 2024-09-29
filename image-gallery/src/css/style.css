@@ -32,8 +32,15 @@ h1 {
   color: #efea66;
   line-height: 50px;
   font-weight: 900;
+  transition: 0.2s;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+    padding-right: 10px;
+  }
+}
 footer {
   align-self: center;
   max-width: 1300px;
@@ -88,17 +95,17 @@ header {
 
 .header__logo {
   display: flex;
-  gap: 8px;
   align-items: center;
 }
 
 .header-input {
-  width: 20dvw;
+  width: 300px;
   height: 39px;
   border-radius: 1rem;
   border: 6px double #efeda6;
   align-self: flex-end;
   outline: none;
+  transition: 0.5s;
 }
 
 .header__search-line {
@@ -121,7 +128,7 @@ header {
 }
 
 .header__search-icon {
-  width: 2dvw;
+  width: 36px;
   height: 39px;
   border-radius: 1rem;
   border: 6px double #efeda6;
@@ -139,6 +146,11 @@ header {
   box-shadow: 0px 0px 5px 5px #efeda6;
 }
 
+@media screen and (max-width: 768px) {
+  .header-input {
+    width: 250px;
+  }
+}
 .gallery {
   display: flex;
   justify-content: center;
