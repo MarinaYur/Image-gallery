@@ -12,6 +12,7 @@
 
 .gallery__picture {
   border: 5px solid #FFFFFF ;
+  cursor: pointer;
 
 }
 
@@ -21,6 +22,7 @@
   height: 250px;
   object-fit: cover;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .gallery__msg-null-answer {

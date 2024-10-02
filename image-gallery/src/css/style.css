@@ -41,6 +41,12 @@ h1 {
     padding-right: 10px;
   }
 }
+@media screen and (max-width: 530px) {
+  h1 {
+    font-size: 2.5rem;
+    padding-right: 0px;
+  }
+}
 footer {
   align-self: center;
   max-width: 1300px;
@@ -82,7 +88,6 @@ footer span {
 header {
   display: flex;
   justify-content: space-between;
-  height: 18dvh;
   align-items: center;
 }
 
@@ -151,6 +156,12 @@ header {
     width: 250px;
   }
 }
+@media screen and (max-width: 530px) {
+  header {
+    flex-direction: column;
+    padding-bottom: 5px;
+  }
+}
 .gallery {
   display: flex;
   justify-content: center;
@@ -165,6 +176,7 @@ header {
 
 .gallery__picture {
   border: 5px solid #FFFFFF;
+  cursor: pointer;
 }
 
 .gallery__picture img {
@@ -173,6 +185,7 @@ header {
   height: 250px;
   object-fit: cover;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .gallery__msg-null-answer {

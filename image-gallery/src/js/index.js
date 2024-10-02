@@ -73,24 +73,25 @@ clear.addEventListener("click", () => {
 });
 
 gallery.addEventListener("click", (e) => {
-  console.log(e.target);
-  if (!e.target.classList.contains('modal') && !e.target.classList.contains('close-modal')) {
-  modal.style.display = "flex";
-  modalContent.src = e.target.src;
-}
+  if (
+    !e.target.classList.contains("modal") &&
+    !e.target.classList.contains("close-modal")
+  ) {
+    modal.style.display = "flex";
+    modalContent.src = e.target.src;
+  }
 });
 
 close.addEventListener("click", (e) => {
-  modal.style.display = "none";}
-);
-
-modal.addEventListener("click", (e) => {
-    modal.style.display = "none";
+  modal.style.display = "none";
 });
 
+modal.addEventListener("click", (e) => {
+  modal.style.display = "none";
+});
 
 console.log(`Дополнительный функционал:
 1. если пришел пустой ответ, то появляется сообщение об этом, и рекомендация
 попробовать еще раз;
 2. при одном клике на картинку она увеличивается и центрируется, закрывается при клике
-по свободному от картинки пространству или по крестику.`)
+по свободному от картинки пространству или по крестику.`);

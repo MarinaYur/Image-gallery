@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  height: 18dvh;
+  // height: 18dvh;
   align-items: center;
 }
 
@@ -70,5 +70,12 @@ header {
 @media screen and (max-width: 768px) {
   .header-input {
     width: 250px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  header {
+    flex-direction: column;
+    padding-bottom: 5px;
   }
 }
